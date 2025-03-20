@@ -1,0 +1,23 @@
+chainlit : 2.0.0
+
+# Interface settings
+ui:
+  name : "Gemini Chatbot"
+  descripttion : "A Simple Chatbot Powerd By GooGle's Gemini model"
+
+  # Message Settings
+  default_expand_message : true
+
+  # Auth Settings
+  auth:
+   required: true
+   providers:
+   - github 
+
+
+# OAuth Configuration
+oauth_providers :
+  github : 
+  client_id : ${OAUTH_GITHUB_CLIENT_ID}
+  client_secret : ${OAUTH_GITHUB_CLIENT_SECRET}
+#  callback_url : "http://localhost:8000/auth/github/callback"
